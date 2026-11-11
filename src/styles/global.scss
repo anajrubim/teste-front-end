@@ -1,0 +1,10 @@
+@use './variables' as *;
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: $font-main; color: $text; background: $white; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+ul { list-style: none; margin: 0; padding: 0; }
+:focus-visible { outline: 2px solid $blue; outline-offset: 2px; }
+.container { width: 100%; max-width: $container + 32px; margin-inline: auto; padding-inline: 16px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+p, h1, h2, h3 { margin: 0; }

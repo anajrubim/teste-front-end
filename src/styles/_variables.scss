@@ -1,0 +1,21 @@
+// Tokens extraídos do Figma
+$navy: #271c47;
+$link-blue: #3019b2;
+$blue: #3341b5;
+$yellow: #f7ca11;
+$text: #3f3f40;
+$gray-bg: #f4f4f4;
+$gray: #808080;
+$placeholder: #9f9f9f;
+$border: #d9d9d9;
+$card-border: #b1b1b1;
+$white: #fff;
+$container: 1280px;
+
+$font-main: 'Poppins', sans-serif;
+$font-alt: 'Work Sans', sans-serif;
+$font-title: 'Outfit', sans-serif;
+
+@mixin reset-button { border: 0; background: none; font: inherit; cursor: pointer; padding: 0; }
+@mixin yellow-button { background: $yellow; color: $navy; font: 600 14px $font-main; border-radius: 8px; border: 0; cursor: pointer; &:hover { filter: brightness(0.95); } }
+@mixin section-title { margin: 0; font: 400 30px $font-main; color: $blue; text-align: center; }
