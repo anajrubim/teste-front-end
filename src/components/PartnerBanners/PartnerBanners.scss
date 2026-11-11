@@ -1,0 +1,9 @@
+@use '../../styles/variables' as *;
+.partners { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; padding-bottom: 87px; @media (max-width: 720px) { grid-template-columns: 1fr; }
+  &__card { position: relative; height: 350px; padding: 0 44px 40px; border-radius: 20px; background-size: cover; background-position: center; color: $white; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; overflow: hidden;
+    &::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 55%, rgba(0, 0, 0, 0.8) 100%); }
+    > * { position: relative; } }
+  &__title { margin: 0; font: 700 40px/60px $font-main; }
+  &__text { margin: 8px 0 31px; max-width: 190px; font: 400 16px/24px $font-main; }
+  &__cta { @include yellow-button; display: grid; place-items: center; width: 145px; height: 48px; border-radius: 6px; font-weight: 700; font-size: 16px; letter-spacing: 1.2px; text-transform: uppercase; text-decoration: none; }
+}

@@ -1,0 +1,11 @@
+@use '../../styles/variables' as *;
+.footer { &__main { background: #f3f3f3; padding: 42px 0; }
+  &__inner { display: grid; grid-template-columns: 444px 1fr; min-height: 198px; @media (max-width: 900px) { grid-template-columns: 1fr; gap: 32px; } }
+  &__brand { padding-top: 19px; p { margin: 18px 0 22px; max-width: 290px; font: 300 14px/22px $font-main; color: $text; } }
+  &__social { display: flex; gap: 24px; a { display: flex; font-size: 24px; line-height: 1; color: #3f3f40; } }
+  &__cols { display: grid; grid-template-columns: 222px 250px 1fr; padding: 38px 0 0 89px; border-left: 1px solid #ccc; @media (max-width: 900px) { border-left: 0; padding: 0; grid-template-columns: 1fr 1fr; gap: 24px; } @media (max-width: 520px) { grid-template-columns: 1fr; }
+    h2 { margin: 0 0 20px; font: 600 16px/24px $font-main; color: rgba(34, 34, 34, 0.71); }
+    ul { display: grid; gap: 12px; }
+    a { font: 400 14px/20px $font-alt; letter-spacing: 0.5px; color: rgba(34, 34, 34, 0.71); text-decoration: none; &:hover { text-decoration: underline; } } }
+  &__bottom { margin: 0; padding: 14px 16px; height: 46px; text-align: center; font: 300 13px/18px $font-main; color: $text; background: $white; }
+}
