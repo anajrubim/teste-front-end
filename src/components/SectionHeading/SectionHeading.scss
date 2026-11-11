@@ -1,0 +1,7 @@
+@use '../../styles/variables' as *;
+.section-heading { max-width: 1140px; margin: 0 auto 26px;
+  &__row { display: flex; align-items: center; gap: 35px; }
+  &__line { flex: 1; height: 1px; background: $border; }
+  &__title { margin: 0; font: 700 30px/45px $font-main; color: $blue; text-align: center; @media (max-width: 640px) { font-size: 22px; line-height: 32px; } }
+  &__all { display: block; margin-top: 5px; text-align: center; font: 600 14px/21px $font-main; color: $text; text-decoration: none; &:hover { text-decoration: underline; } }
+}
