@@ -1,0 +1,10 @@
+@use '../../styles/variables' as *;
+.categories { padding-top: 39px; padding-bottom: 90px;
+  &__list { display: flex; justify-content: safe center; gap: 43px; overflow-x: auto; padding: 6px 6px 14px; margin: -6px -6px -14px; scrollbar-width: none; &::-webkit-scrollbar { display: none; } @media (max-width: 700px) { gap: 20px; } }
+  &__item { @include reset-button; width: 128px; display: flex; flex-direction: column; align-items: center; }
+  &__icon { width: 128px; height: 128px; display: grid; place-items: center; background: $gray-bg; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); transition: transform 0.2s; img { width: 64px; height: 64px; object-fit: contain; } }
+  &__item:hover &__icon { transform: translateY(-3px); }
+  &__name { margin-top: 22px; font: 400 14px/20px $font-main; color: #4d4d4d; text-align: center; white-space: nowrap; }
+  &__item.is-active &__name { color: $link-blue; font-weight: 600; }
+  &__item.is-active &__icon { background: $white; }
+}

@@ -1,0 +1,20 @@
+@use '../../styles/variables' as *;
+.header { background: $white; position: relative; z-index: 5;
+  &__benefits { display: flex; justify-content: center; gap: 118px; height: 33px; align-items: center; border-bottom: 1px solid #e6e6e6; font: 300 13px $font-main; color: $gray;
+    li { display: flex; align-items: center; gap: 10px; white-space: nowrap; }
+    i { font-size: 16px; line-height: 1; display: flex; }
+    strong { font-weight: 600; color: $link-blue; }
+    @media (max-width: 900px) { gap: 24px; font-size: 11px; overflow: hidden; } @media (max-width: 640px) { display: none; } }
+  &__main { display: grid; grid-template-columns: 1fr minmax(0, 630px) 1fr; align-items: center; height: 71px; gap: 16px;
+    @media (max-width: 900px) { grid-template-columns: auto 1fr auto; } @media (max-width: 560px) { grid-template-columns: auto 1fr; .header__actions { display: none; } } }
+  &__search { position: relative;
+    input { width: 100%; height: 48px; padding: 0 56px 0 16px; border: 0; border-radius: 8px; background: $gray-bg; font: 400 14px $font-main; color: $text; &::placeholder { color: $gray; opacity: 1; } &::-webkit-search-cancel-button { display: none; } }
+    button { @include reset-button; position: absolute; right: 22px; top: 12px; font-size: 24px; line-height: 1; color: $gray; display: flex; } }
+  &__actions { display: flex; justify-content: flex-end; gap: 32px;
+    button { @include reset-button; display: flex; font-size: 28px; line-height: 1; color: $text; &:hover { color: $blue; } } }
+  &__nav { border-top: 1px solid #e6e6e6; height: 40px;
+    ul { display: flex; justify-content: space-between; align-items: center; height: 100%; padding: 0 69px; overflow-x: auto; scrollbar-width: none; gap: 24px; @media (max-width: 1000px) { padding: 0; } }
+    a { display: flex; align-items: center; gap: 8px; font: 500 12px $font-main; text-transform: uppercase; color: $gray; text-decoration: none; white-space: nowrap; &:hover { color: $blue; } }
+    i { font-size: 16px; line-height: 1; display: flex; }
+    .is-highlight a { font-weight: 600; color: $link-blue; } }
+}

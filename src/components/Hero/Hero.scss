@@ -1,0 +1,8 @@
+@use '../../styles/variables' as *;
+.hero { position: relative; height: 391px; background-size: cover; background-position: center; color: $white;
+  &::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.55) 40%, rgba(0, 0, 0, 0) 75%); }
+  &__content { position: relative; height: 100%; padding-top: 78px; }
+  &__title { margin: 0; max-width: 640px; font: 600 48px/50px $font-main; @media (max-width: 640px) { font-size: 32px; line-height: 36px; } }
+  &__subtitle { margin: 22px 0 0; font: 400 32px/48px $font-main; strong { font-weight: 600; color: $yellow; } @media (max-width: 640px) { font-size: 22px; line-height: 32px; } }
+  &__cta { @include yellow-button; display: grid; place-items: center; width: 206px; height: 50px; margin: 50px 0 0 7px; border-radius: 4px; font-size: 16px; text-decoration: none; }
+}
