@@ -1,0 +1,10 @@
+@use '../../styles/variables' as *;
+.product-card { display: flex; flex-direction: column; height: 100%; padding: 26px 13px 16px; background: $white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  &__media { @include reset-button; display: flex; justify-content: center; align-items: center; height: 238px; img { width: 275px; max-width: 100%; height: 238px; object-fit: contain; } }
+  &__name { margin-top: 4px; min-height: 48px; font: 300 16px/23px $font-main; color: $text; }
+  &__old-price { margin-top: 12px; font: 400 16px/24px $font-main; color: $gray; text-decoration: line-through; }
+  &__price { margin-top: 2px; font: 700 20px/28px $font-main; color: $text; }
+  &__installments { margin-top: 3px; font: 400 13px/20px $font-main; color: $text; }
+  &__shipping { margin-top: 5px; font: 400 13px/20px $font-main; color: $blue; }
+  &__buy { @include reset-button; margin-top: 11px; height: 44px; border-radius: 4px; background: $blue; color: $white; font: 700 14px $font-main; text-transform: uppercase; &:hover { filter: brightness(1.1); } }
+}

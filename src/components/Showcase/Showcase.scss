@@ -1,0 +1,9 @@
+@use '../../styles/variables' as *;
+.showcase { padding-bottom: 56px;
+  &__tabs { display: grid; grid-template-columns: repeat(6, 1fr); margin: 5px 0 24px; overflow-x: auto;
+    button, a { display: grid; place-items: center; height: 40px; min-width: 110px; margin-left: -1px; border: 1px solid #b1b1b1; background: $white; font: 400 16px $font-main; text-transform: uppercase; color: #3b3b3b; text-decoration: none; cursor: pointer; &:first-child { margin-left: 0; } }
+    button.is-active { font-weight: 700; color: $blue; }
+    @media (max-width: 760px) { display: flex; } }
+  &__status { text-align: center; color: $gray; &--error { color: #c00; } }
+  &__carousel { --per-view: 4; --gap: 18px; @media (max-width: 1000px) { --per-view: 3; } @media (max-width: 720px) { --per-view: 2; --gap: 12px; } @media (max-width: 460px) { --per-view: 1; } }
+}
